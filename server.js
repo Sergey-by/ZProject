@@ -1,15 +1,18 @@
 var express = require('express'),
-    port = 8558;
+	server = express(),
+    port = 8558,
+    gal = require('./models/gallery.js');;
     
-app.use(express.logger('dev'));
-app.use(express.bodyParser());
-app.use(express.query());
-app.use(express.methodOverride());
-app.use(express.cookieParser());
+// server.use(express.logger('dev'));
+// server.use(express.bodyParser());
+// server.use(express.query());
+// server.use(express.methodOverride());
+// server.use(express.cookieParser());
 
-app.get('/', function (req,res, next) {
+server.get('/:any_text', function (req,res, next) {
   console.log('Entered.');
+  gal.showGallery(req, res);
 });
 
-app.listen(port);
+server.listen(port);
 console.log('Listening on port ', port);
