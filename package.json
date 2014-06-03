@@ -1,0 +1,11 @@
+{
+    "name": "test_server",
+    "version": "0.1.0",
+    "description": "",
+    "main": "server.js",
+    "devDependencies": {
+        "express": "3.x"
+    },
+    "author": "",
+    "license": ""
+}
