@@ -10,7 +10,7 @@ var express = require('express'),
 // server.use(express.cookieParser());
 
 server.get('/:any_text', function (req,res, next) {
-  console.log('Entered.');
+  console.log('Reseived simple get request');
   gal.showGallery(req, res);
 });
 
